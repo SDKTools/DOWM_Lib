@@ -11,7 +11,7 @@ class DOWM {
     run(inputs) {
         if (inputs.length == this.entryNum) {
             let result = 0;
-            for (let pair of zip(inputs, weights)) {
+            for (let pair of zip(inputs, this.weights)) {
                 result += pair[0] * pair[1];
             }
             result = result / this.entryNum;
