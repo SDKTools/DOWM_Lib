@@ -1,5 +1,9 @@
-function zip(arr1, arr2) {
-    return arr1.map((item, index) => [item, arr2[index]]);
+function WeightedSum(values, weights) {
+    let result = 0;
+    for (let i = 0; i < values.length; i++) {
+        result += values[i] * weights[i];
+    }
+    return result;
 }
 
 class DOWM {
@@ -10,19 +14,16 @@ class DOWM {
 
     run(inputs) {
         if (inputs.length == this.entryNum) {
-            let result = 0;
-            for (let pair of zip(inputs, this.weights)) {
-                result += pair[0] * pair[1];
-            }
-            result = result / this.entryNum;
+            let result = WeightedSum(inputs, this.weights) / this.entryNum;
             return result;
         } else {
-            console.error("Overinput");
+            console.error("Overinput or Underinput");
             return null;
         }
     }
 }
 
 module.exports = {
-    DOWM
+    DOWM,
+    WeightedSum
 };
