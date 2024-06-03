@@ -1,0 +1,26 @@
+{
+  "name": "dowm_lib",
+  "version": "0.0.1-alpha",
+  "description": "DOWM(Dual Option Weight Medium)_Lib is a lib of a algorithm of machine learning that i made",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SDKTools/DOWM_Lib.git"
+  },
+  "keywords": [
+    "dowm",
+    "dowm-lib",
+    "machine-learning",
+    "machine-learning-lib",
+    "machine-learning-dk",
+    "machine-learning-development-kit",
+    "machine-learning-sdk",
+    "mldk",
+    "ml-sdk"
+  ],
+  "author": "Just_a_RandomDev",
+  "license": "GPL-2.0"
+}
