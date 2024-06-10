@@ -1,11 +1,20 @@
 const { DOWM } = require("dowm_lib");
 
-let dowmIA = new DOWM(3, [0.67, 0.70, 0.94]); // Brilho, Saturação, Liso(em medida)
+// An Example
 
-let result = dowmIA.run([0.64, 0.57, 0.68]);
+let dowmIA = new DOWM(3, [0.8, 0.9, 0.7]); // how gold is, how black is, how white is
+
+dowmIA.train([
+    [[0.72, 0.87, 0.2], 0.98],
+    [[0.0, 0.2, 0.9], 0.25],
+    [[0.61, 0.86, 0.14], 0.82],
+    [[0.0, 0.4, 0.9], 0.19]
+]);
+
+let result = dowmIA.run([0.5, 0.9, 0.2]);
 
 if (result >= 0.5) {
-    console.log("maçã");
-} else if (result < 0.5) {
-    console.log("laranja");
+    console.log("Yorkshire");
+} else {
+    console.log("Shih-tzu");
 }
